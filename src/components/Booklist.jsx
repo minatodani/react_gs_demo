@@ -21,7 +21,7 @@ const Booklist = (props) => {
             <div key={index}>
               <li>{x.volumeInfo.title}</li>
               <img
-                src={x.volumeInfo.imageLinks.thumbnail}
+                // src={x.volumeInfo.imageLinks.thumbnail}
                 alt=""
                 style={imageStyle}
               />
