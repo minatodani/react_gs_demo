@@ -28,7 +28,7 @@ const Booklist = (props) => {
                   style={imageStyle}
                 />
               ) : (
-                <p></p>
+                <p style={imageStyle}></p>
               )}
             </div>
           ))
