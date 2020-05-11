@@ -1,16 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-// const Image = (props) => {
-//   const imageURL = "";
-//   if (props.book.volumeInfo.imageLinks) {
-//     imageURL = props.book.volumeInfo.imageLinks.thumbnail;
-//     console.log({ imageURL });
-//   }
-//   return imageURL;
-// };
-
-// console.log({ Image });
-
 const Booklist = (props) => {
   const [bookData, setBookData] = useState(null);
   useEffect(() => {
@@ -39,8 +28,7 @@ const Booklist = (props) => {
                   style={imageStyle}
                 />
               ) : (
-                // <p>sucsess</p>
-                <p>error</p>
+                <p></p>
               )}
             </div>
           ))
