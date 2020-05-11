@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from "react";
 
+// const Image = (props) => {
+//   const imageURL = "";
+//   if (props.book.volumeInfo.imageLinks) {
+//     imageURL = props.book.volumeInfo.imageLinks.thumbnail;
+//     console.log({ imageURL });
+//   }
+//   return imageURL;
+// };
+
+// console.log({ Image });
+
 const Booklist = (props) => {
   const [bookData, setBookData] = useState(null);
   useEffect(() => {
@@ -20,11 +31,17 @@ const Booklist = (props) => {
           bookData.data.items.map((x, index) => (
             <div key={index}>
               <li>{x.volumeInfo.title}</li>
-              <img
-                src={x.volumeInfo.imageLinks.thumbnail}
-                alt=""
-                style={imageStyle}
-              />
+
+              {x.volumeInfo.imageLinks ? (
+                <img
+                  src={x.volumeInfo.imageLinks.thumbnail}
+                  alt=""
+                  style={imageStyle}
+                />
+              ) : (
+                // <p>sucsess</p>
+                <p>error</p>
+              )}
             </div>
           ))
         )}
