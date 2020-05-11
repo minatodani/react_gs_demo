@@ -19,9 +19,9 @@ const Booklist = (props) => {
         ) : (
           bookData.data.items.map((x, index) => (
             <div key={index}>
-              <li>{x.volumeInfo.title}a</li>
+              <li>{x.volumeInfo.title}</li>
               <img
-                // src={x.volumeInfo.imageLinks.thumbnail}
+                src={x.volumeInfo.imageLinks.thumbnail}
                 alt=""
                 style={imageStyle}
               />
